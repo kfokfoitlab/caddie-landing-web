@@ -13,6 +13,8 @@
     "lint:eslint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\" --no-error-on-unmatched-pattern --cache --cache-location .eslintcache"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
