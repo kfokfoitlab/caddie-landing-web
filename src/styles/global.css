@@ -59,4 +59,6 @@
 
 * {
   font-family: Pretendard;
+  color: #111;
+  word-break: keep-all;
 }

@@ -70,7 +70,6 @@ const HeaderLinkItem = styled.a`
 
 const BannerContentWrapper = styled.div`
   padding-top: 250px;
-  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,15 +79,18 @@ const BannerTitleText = styled.p`
   text-align: center;
   font-size: 70px;
   margin-bottom: 20px;
+  color: #fff;
 
   > span {
     font-weight: 600;
+    color: #fff;
   }
 `;
 
 const BannerSubtitleText = styled.p`
   font-size: 24px;
   margin-bottom: 50px;
+  color: #fff;
 `;
 
 const BannerServiceButton = styled.button`
