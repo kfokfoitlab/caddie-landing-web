@@ -5,6 +5,7 @@ import BannerSection from "@/components/BannerSection";
 import IntroductionSection from "@/components/IntroductionSection";
 import AboutCaddieSection from "@/components/AboutCaddieSection";
 import EducationalProgramSection from "@/components/EducationalProgramSection";
+import AboutTrainingSection from "@/components/AboutTrainingSection";
 
 export function App() {
   return (
@@ -13,6 +14,7 @@ export function App() {
       <IntroductionSection />
       <AboutCaddieSection />
       <EducationalProgramSection />
+      <AboutTrainingSection />
     </GenericLayout>
   );
 }
