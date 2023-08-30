@@ -4,6 +4,7 @@ import "@/styles/global.css";
 import BannerSection from "@/components/BannerSection";
 import IntroductionSection from "@/components/IntroductionSection";
 import AboutCaddieSection from "@/components/AboutCaddieSection";
+import EducationalProgramSection from "@/components/EducationalProgramSection";
 
 export function App() {
   return (
@@ -11,6 +12,7 @@ export function App() {
       <BannerSection />
       <IntroductionSection />
       <AboutCaddieSection />
+      <EducationalProgramSection />
     </GenericLayout>
   );
 }
