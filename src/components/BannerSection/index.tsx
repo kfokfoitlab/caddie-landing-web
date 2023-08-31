@@ -6,7 +6,7 @@ export default function BannerSection() {
     <Wrapper>
       <ContentLayout>
         <HeaderWrapper>
-          <img src="/assets/img/logo.svg" alt="lgoo" />
+          <HeaderLogoImage src="/assets/img/logo.svg" alt="logo" />
 
           <HeaderLinkWrapper>
             <HeaderLinkItem href="#">프로그램 안내</HeaderLinkItem>
@@ -42,6 +42,10 @@ const Wrapper = styled.div`
   height: 1074px;
   background: center center / cover url("assets/img/bg_banner.png");
   position: relative;
+
+  @media screen and (max-width: 1119px) {
+    height: 816px;
+  }
 `;
 
 const HeaderWrapper = styled.div`
@@ -50,6 +54,14 @@ const HeaderWrapper = styled.div`
   height: 120px;
   width: 100%;
   justify-content: space-between;
+`;
+
+const HeaderLogoImage = styled.img`
+  height: 20px;
+
+  @media screen and (max-width: 1119px) {
+    height: 16px;
+  }
 `;
 
 const HeaderLinkWrapper = styled.div`
@@ -66,10 +78,18 @@ const HeaderLinkItem = styled.a`
   &:not(:last-of-type) {
     margin-right: 80px;
   }
+
+  @media screen and (max-width: 1119px) {
+    font-size: 18px;
+
+    &:not(:last-of-type) {
+      margin-right: 90px;
+    }
+  }
 `;
 
 const BannerContentWrapper = styled.div`
-  padding-top: 250px;
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,12 +105,21 @@ const BannerTitleText = styled.p`
     font-weight: 600;
     color: #fff;
   }
+
+  @media screen and (max-width: 1119px) {
+    font-size: 50px;
+  }
 `;
 
 const BannerSubtitleText = styled.p`
   font-size: 24px;
   margin-bottom: 50px;
   color: #fff;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
 `;
 
 const BannerServiceButton = styled.button`
@@ -100,6 +129,7 @@ const BannerServiceButton = styled.button`
   color: #fff;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid #ffffff;
+  height: 64px;
   border-radius: 32px;
   cursor: pointer;
   display: flex;
@@ -107,6 +137,10 @@ const BannerServiceButton = styled.button`
 
   > img {
     margin-left: 8px;
+  }
+
+  @media screen and (max-width: 1119px) {
+    padding: 15px 50px;
   }
 `;
 

@@ -8,4 +8,8 @@ export const ContentLayout = styled.div`
   padding: 0 100px;
   position: relative;
   margin: 0 auto;
+
+  @media screen and (max-width: 1119px) {
+    padding: 0 50px;
+  }
 `;
