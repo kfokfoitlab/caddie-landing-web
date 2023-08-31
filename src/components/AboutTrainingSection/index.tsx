@@ -86,23 +86,65 @@ export default function AboutTrainingSection() {
               <div>
                 <CardContentSmallBoxLineWrapper>
                   <CardContentSmallBoxWrapper>
-                    <CardContentBoxTitleText>
+                    <CardContentBoxTitleText className="pc">
                       렉스필드 CC
+                    </CardContentBoxTitleText>
+                    <CardContentBoxTitleText className="tablet">
+                      렉스필드
+                      <br />
+                      CC
+                    </CardContentBoxTitleText>
+                    <CardContentBoxTitleText className="mobile">
+                      렉스필드
+                      <br />
+                      CC
                     </CardContentBoxTitleText>
                   </CardContentSmallBoxWrapper>
                   <CardContentSmallBoxWrapper>
-                    <CardContentBoxTitleText>블루원 CC</CardContentBoxTitleText>
+                    <CardContentBoxTitleText className="pc">
+                      블루원 CC
+                    </CardContentBoxTitleText>
+                    <CardContentBoxTitleText className="tablet">
+                      블루원
+                      <br />
+                      CC
+                    </CardContentBoxTitleText>
+                    <CardContentBoxTitleText className="mobile">
+                      블루원
+                      <br />
+                      CC
+                    </CardContentBoxTitleText>
                   </CardContentSmallBoxWrapper>
                 </CardContentSmallBoxLineWrapper>
                 <CardContentSmallBoxLineWrapper>
                   <CardContentSmallBoxWrapper>
-                    <CardContentBoxTitleText>
+                    <CardContentBoxTitleText className="pc">
                       모나파크 CC
+                    </CardContentBoxTitleText>
+                    <CardContentBoxTitleText className="tablet">
+                      모나파크
+                      <br />
+                      CC
+                    </CardContentBoxTitleText>
+                    <CardContentBoxTitleText className="mobile">
+                      모나파크
+                      <br />
+                      CC
                     </CardContentBoxTitleText>
                   </CardContentSmallBoxWrapper>
                   <CardContentSmallBoxWrapper>
-                    <CardContentBoxTitleText>
+                    <CardContentBoxTitleText className="pc">
                       블랙스톤 CC
+                    </CardContentBoxTitleText>
+                    <CardContentBoxTitleText className="tablet">
+                      블랙스톤
+                      <br />
+                      CC
+                    </CardContentBoxTitleText>
+                    <CardContentBoxTitleText className="mobile">
+                      블랙스톤
+                      <br />
+                      CC
                     </CardContentBoxTitleText>
                   </CardContentSmallBoxWrapper>
                 </CardContentSmallBoxLineWrapper>
@@ -124,10 +166,10 @@ export default function AboutTrainingSection() {
                 현직 멘토와 함께하는 일경험
               </CardContentAbsoluteBoxWrapper>
             </CardItemWrapper>
-            <CardItemWrapper>
+            <CardItemWrapper className="lg:!pr-[11px] !pl-[15px]">
               <CardTextWrapper>
                 <CardItemTitleText>일경험 및 체험 프로그램</CardItemTitleText>
-                <CardItemSubtitleText>
+                <CardItemSubtitleText className="lg:whitespace-nowrap">
                   국민취업지원제도 일경험 제도
                   <br />
                   실제 캐디 직업 체험이 가능한 보완 프로그램
@@ -254,6 +296,7 @@ const CardItemWrapper = styled.div`
   background-color: #fff;
   width: 0;
   flex-grow: 1;
+  min-width: 226px;
   padding: 30px 22px;
   border-radius: 10px;
   position: relative;
@@ -284,7 +327,7 @@ const CardItemTitleText = styled.p`
   margin-bottom: 10px;
 
   @media screen and (max-width: 1119px) {
-    font-size: 22px;
+    font-size: 20px;
   }
 `;
 
@@ -300,6 +343,7 @@ const CardItemSubtitleText = styled.p`
     font-size: 12px;
     margin-bottom: 15px;
     max-width: 100%;
+    letter-spacing: -0.18px;
   }
 `;
 
@@ -416,6 +460,7 @@ const CardContentBoxMainTitleText = styled.p`
 const CardContentBoxTitleText = styled.p`
   font-size: 16px;
   font-weight: 600;
+  text-align: center;
 `;
 
 const CardContentBoxSubtitleText = styled.p`
