@@ -13,11 +13,20 @@ export default function Footer() {
 const Wrapper = styled.div`
   padding: 65px 100px;
   background-color: #474747;
+
+  @media screen and (max-width: 1119px) {
+    padding: 65px 40px;
+  }
 `;
 
 const Logo = styled.img`
   height: 20px;
   margin-bottom: 28px;
+
+  @media screen and (max-width: 1119px) {
+    height: 17px;
+    margin-bottom: 15px;
+  }
 `;
 
 const Text = styled.p`
@@ -26,5 +35,13 @@ const Text = styled.p`
 
   &:not(:last-of-type) {
     margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 1119px) {
+    font-size: 12px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
   }
 `;

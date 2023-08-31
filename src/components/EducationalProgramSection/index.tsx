@@ -17,19 +17,37 @@ const TypeText = styled.p`
   color: #38613c;
   font-size: 18px;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 16px;
+  }
 `;
 
 const TitleText = styled.p`
   font-weight: bold;
   font-size: 42px;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
 `;
 
 const SubtitleText = styled.p`
   font-weight: 500;
   margin-bottom: 80px;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
 `;
 
 const BannerImage = styled.img`
   width: 70%;
+
+  @media screen and (max-width: 1119px) {
+    width: 100%;
+  }
 `;

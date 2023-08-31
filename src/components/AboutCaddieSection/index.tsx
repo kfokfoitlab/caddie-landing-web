@@ -44,8 +44,14 @@ export default function AboutCaddieSection() {
             <AboutTitleText>
               6만<span>여명 캐디 수요</span>
             </AboutTitleText>
-            <AboutSubtitleText>
+            <AboutSubtitleText className="pc">
               전국 500개 골프장 환산 시 전국 6만여명 캐디 인력 필요
+            </AboutSubtitleText>
+            <AboutSubtitleText className="tablet">
+              전국 500개 골프장 환산 시<br /> 전국 6만여명 캐디 인력 필요
+            </AboutSubtitleText>
+            <AboutSubtitleText className="mobile">
+              전국 500개 골프장 환산 시<br /> 전국 6만여명 캐디 인력 필요
             </AboutSubtitleText>
           </AboutItem>
           <AboutItem>
@@ -54,8 +60,16 @@ export default function AboutCaddieSection() {
               혜택
             </AboutTagText>
             <AboutTitleText>숙식제공</AboutTitleText>
-            <AboutSubtitleText>
+            <AboutSubtitleText className="pc">
               셔틀차량, 사원아파트, 기숙사 희망 시 제공 (골프장 별 상이)
+            </AboutSubtitleText>
+            <AboutSubtitleText className="tablet">
+              셔틀차량, 사원아파트, 기숙사 희망 시 제공
+              <br /> (골프장 별 상이)
+            </AboutSubtitleText>
+            <AboutSubtitleText className="mobile">
+              셔틀차량, 사원아파트, 기숙사 희망 시 제공
+              <br /> (골프장 별 상이)
             </AboutSubtitleText>
           </AboutItem>
         </AboutWrapper>
@@ -74,6 +88,10 @@ const TypeText = styled.p`
   color: #ffafaf;
   font-size: 18px;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 16px;
+  }
 `;
 
 const TitleText = styled.p`
@@ -81,12 +99,22 @@ const TitleText = styled.p`
   font-size: 42px;
   margin-bottom: 20px;
   color: #fff;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
 `;
 
 const SubtitleText = styled.p`
   font-weight: 500;
   margin-bottom: 80px;
   color: #fff;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
 `;
 
 const AboutWrapper = styled.div`
@@ -135,4 +163,8 @@ const AboutSubtitleText = styled.p`
   font-size: 14px;
   font-weight: 600;
   color: #fff;
+
+  @media screen and (max-width: 1119px) {
+    line-height: 1.4;
+  }
 `;

@@ -57,17 +57,31 @@ const TypeText = styled.p`
   color: #38613c;
   font-size: 18px;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 16px;
+  }
 `;
 
 const TitleText = styled.p`
   font-weight: bold;
   font-size: 42px;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
 `;
 
 const SubtitleText = styled.p`
   font-weight: 500;
   margin-bottom: 80px;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
 `;
 
 const CardWrapper = styled.div`
@@ -89,6 +103,11 @@ const CardItemWrapper = styled.div<{ backgroundUrl: string }>`
   &:not(:last-of-type) {
     margin-right: 30px;
   }
+
+  @media screen and (max-width: 1119px) {
+    padding: 58px 20px;
+    min-height: 330px;
+  }
 `;
 
 const CardItemTitleText = styled.p`
@@ -97,10 +116,19 @@ const CardItemTitleText = styled.p`
   font-weight: bold;
   margin-bottom: 25px;
   line-height: 1.25;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
 `;
 
 const CardItemContentText = styled.p`
   font-weight: 600;
   color: #fff;
   line-height: 1.6;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 14px;
+  }
 `;

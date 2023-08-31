@@ -141,6 +141,13 @@ const BannerServiceButton = styled.button`
 
   @media screen and (max-width: 1119px) {
     padding: 15px 50px;
+    height: 48px;
+    border-radius: 24px;
+    font-size: 16px;
+
+    > img {
+      margin-left: 5px;
+    }
   }
 `;
 
@@ -159,5 +166,9 @@ const BannerScrollButton = styled.button`
   > img {
     width: 85px;
     height: 85px;
+  }
+
+  @media screen and (max-width: 1119px) {
+    display: none;
   }
 `;

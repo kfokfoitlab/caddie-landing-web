@@ -14,6 +14,13 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    screens: {
+      md: { max: "767px" },
+      // => @media (max-width: 767px) { ... }
+
+      lg: { max: "1119px" },
+      // => @media (max-width: 1119px) { ... }
+    },
   },
   plugins: [
     plugin(function ({ matchUtilities }) {

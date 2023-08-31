@@ -6,4 +6,8 @@ export const SectionLayout = styled.div`
   align-items: center;
   padding: 200px 25px;
   position: relative;
+
+  @media screen and (max-width: 1119px) {
+    padding: 100px 25px;
+  }
 `;

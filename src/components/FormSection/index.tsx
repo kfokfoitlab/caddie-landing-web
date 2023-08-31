@@ -170,13 +170,13 @@ export default function FormSection() {
           </FormInputWrapper>
           <FormErrorText>{errorText.phone}</FormErrorText>
         </FormItemWrapper>
-        <FormItemWrapper>
+        <FormItemWrapper className="lg:!mb-[60px]">
           <FormLabelText>
             주소 <span>*</span>
           </FormLabelText>
           <FormInputWrapper>
             <FormInput
-              className="mb-[10px]"
+              className="mb-[10px] lg:mb-[6px]"
               value={formData.address}
               isError={Boolean(errorText.address)}
               placeholder="예) 연희동 123, 도산대로 22"
@@ -233,16 +233,29 @@ const TypeText = styled.p`
   color: #38613c;
   font-size: 18px;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 16px;
+  }
 `;
 
 const TitleText = styled.p`
   font-weight: bold;
   font-size: 42px;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
 `;
 
 const SubtitleText = styled.p`
   font-weight: 500;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 16px;
+  }
 `;
 
 const FormWrapper = styled.form<{ isShowForm: boolean }>`
@@ -260,6 +273,19 @@ const FormWrapper = styled.form<{ isShowForm: boolean }>`
           margin-top: 0;
           height: 0;
         `}
+
+  @media screen and (max-width: 1119px) {
+    ${({ isShowForm }) =>
+      isShowForm
+        ? css`
+            margin-top: 40px;
+            height: auto;
+          `
+        : css`
+            margin-top: 0;
+            height: 0;
+          `}
+  }
 `;
 
 const FormItemWrapper = styled.div`
@@ -267,6 +293,12 @@ const FormItemWrapper = styled.div`
 
   &:not(:last-of-type) {
     margin-bottom: 56px;
+  }
+
+  @media screen and (max-width: 1119px) {
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
   }
 `;
 
@@ -277,6 +309,10 @@ const FormLabelText = styled.p`
 
   > span {
     color: #ff0000;
+  }
+
+  @media screen and (max-width: 1119px) {
+    margin-bottom: 10px;
   }
 `;
 
@@ -291,6 +327,10 @@ const FormErrorText = styled.p`
   bottom: -6px;
   left: 0;
   transform: translate(0, 100%);
+
+  @media screen and (max-width: 1119px) {
+    font-size: 12px;
+  }
 `;
 
 const FormInput = styled.input<{ isError: boolean }>`
@@ -306,6 +346,10 @@ const FormInput = styled.input<{ isError: boolean }>`
   &::placeholder {
     color: #d4d4d4;
   }
+
+  @media screen and (max-width: 1119px) {
+    font-size: 16px;
+  }
 `;
 
 const FormCheckboxLabelWrapper = styled(FormControlLabel)``;
@@ -314,6 +358,10 @@ const FormCheckboxLabelText = styled.p`
   color: #707070;
   font-weight: 500;
   margin-right: 5px;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 14px;
+  }
 `;
 
 const FormCheckboxLabelLinkText = styled.a`
@@ -321,6 +369,10 @@ const FormCheckboxLabelLinkText = styled.a`
   font-size: 14px;
   font-weight: 500;
   text-decoration: underline;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 12px;
+  }
 `;
 
 const StyledCheckbox = styled(Checkbox)`
@@ -348,5 +400,13 @@ const SubmitButton = styled(Button)`
   &.Mui-disabled {
     pointer-events: none;
     opacity: 0.3;
+  }
+
+  @media screen and (max-width: 1119px) {
+    margin-top: 40px;
+    height: 48px;
+    border-radius: 24px;
+    width: 210px;
+    font-size: 16px;
   }
 `;

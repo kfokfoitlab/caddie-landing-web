@@ -31,9 +31,22 @@ export default function AboutTrainingSection() {
             <CardItemWrapper>
               <CardTextWrapper>
                 <CardItemTitleText>이론교육</CardItemTitleText>
-                <CardItemSubtitleText>
+                <CardItemSubtitleText className="pc">
                   골프 CS 매너 및 비즈니스 회화, 캐디 기본 이론 등 기본 직무
                   이론 교육 온/오프라인 진행
+                </CardItemSubtitleText>
+                <CardItemSubtitleText className="tablet">
+                  골프 CS 매너 및 비즈니스 회화,
+                  <br />
+                  캐디 기본 이론 등 기본 직무 이론 교육
+                  <br /> 온/오프라인 진행
+                </CardItemSubtitleText>
+                <CardItemSubtitleText className="mobile">
+                  골프 CS 매너 및 비즈니스 회화,
+                  <br />
+                  캐디 기본 이론 등 기본 직무 이론 교육
+                  <br />
+                  온/오프라인 진행
                 </CardItemSubtitleText>
               </CardTextWrapper>
 
@@ -59,27 +72,41 @@ export default function AboutTrainingSection() {
             <CardItemWrapper>
               <CardTextWrapper>
                 <CardItemTitleText>현장 실습</CardItemTitleText>
-                <CardItemSubtitleText>
+                <CardItemSubtitleText className="pc">
                   전국 업무협약 골프장 내 4 Bag 동반 라운딩
+                </CardItemSubtitleText>
+                <CardItemSubtitleText className="tablet">
+                  전국 업무협약 골프장 내<br />4 Bag 동반 라운딩
+                </CardItemSubtitleText>
+                <CardItemSubtitleText className="mobile">
+                  전국 업무협약 골프장 내<br />4 Bag 동반 라운딩
                 </CardItemSubtitleText>
               </CardTextWrapper>
 
-              <CardContentBoxLineWrapper>
-                <CardContentSmallBoxWrapper>
-                  <CardContentBoxTitleText>렉스필드 CC</CardContentBoxTitleText>
-                </CardContentSmallBoxWrapper>
-                <CardContentSmallBoxWrapper>
-                  <CardContentBoxTitleText>블루원 CC</CardContentBoxTitleText>
-                </CardContentSmallBoxWrapper>
-              </CardContentBoxLineWrapper>
-              <CardContentBoxLineWrapper>
-                <CardContentSmallBoxWrapper>
-                  <CardContentBoxTitleText>모나파크 CC</CardContentBoxTitleText>
-                </CardContentSmallBoxWrapper>
-                <CardContentSmallBoxWrapper>
-                  <CardContentBoxTitleText>블랙스톤 CC</CardContentBoxTitleText>
-                </CardContentSmallBoxWrapper>
-              </CardContentBoxLineWrapper>
+              <div>
+                <CardContentSmallBoxLineWrapper>
+                  <CardContentSmallBoxWrapper>
+                    <CardContentBoxTitleText>
+                      렉스필드 CC
+                    </CardContentBoxTitleText>
+                  </CardContentSmallBoxWrapper>
+                  <CardContentSmallBoxWrapper>
+                    <CardContentBoxTitleText>블루원 CC</CardContentBoxTitleText>
+                  </CardContentSmallBoxWrapper>
+                </CardContentSmallBoxLineWrapper>
+                <CardContentSmallBoxLineWrapper>
+                  <CardContentSmallBoxWrapper>
+                    <CardContentBoxTitleText>
+                      모나파크 CC
+                    </CardContentBoxTitleText>
+                  </CardContentSmallBoxWrapper>
+                  <CardContentSmallBoxWrapper>
+                    <CardContentBoxTitleText>
+                      블랙스톤 CC
+                    </CardContentBoxTitleText>
+                  </CardContentSmallBoxWrapper>
+                </CardContentSmallBoxLineWrapper>
+              </div>
             </CardItemWrapper>
           </CardLineWrapper>
           <CardLineWrapper>
@@ -103,7 +130,7 @@ export default function AboutTrainingSection() {
                 <CardItemSubtitleText>
                   국민취업지원제도 일경험 제도
                   <br />
-                  실제 캐디 직업 체험이 가능한 보완 브로그램
+                  실제 캐디 직업 체험이 가능한 보완 프로그램
                 </CardItemSubtitleText>
               </CardTextWrapper>
 
@@ -123,25 +150,36 @@ export default function AboutTrainingSection() {
             <CardItemWrapper>
               <CardTextWrapper>
                 <CardItemTitleText>수료생 사후 관리</CardItemTitleText>
-                <CardItemSubtitleText>
+                <CardItemSubtitleText className="pc">
                   수료 후 모니터링을 통한 보수교육 등 지속 관리
+                </CardItemSubtitleText>
+                <CardItemSubtitleText className="tablet">
+                  수료 후 모니터링을 통한
+                  <br /> 보수교육 등 지속 관리
+                </CardItemSubtitleText>
+                <CardItemSubtitleText className="mobile">
+                  수료 후 모니터링을 통한
+                  <br />
+                  보수교육 등 지속 관리
                 </CardItemSubtitleText>
               </CardTextWrapper>
 
-              <CardContentBoxLineWrapper>
-                <CardContentSmallBoxWrapper>
-                  <CardContentBoxTitleText>
-                    스킬 미스매치 최소화
-                  </CardContentBoxTitleText>
-                </CardContentSmallBoxWrapper>
-              </CardContentBoxLineWrapper>
-              <CardContentBoxLineWrapper>
-                <CardContentSmallBoxWrapper>
-                  <CardContentBoxTitleText>
-                    안정적 자립 환경 제공
-                  </CardContentBoxTitleText>
-                </CardContentSmallBoxWrapper>
-              </CardContentBoxLineWrapper>
+              <div>
+                <CardContentSmallBoxLineWrapper>
+                  <CardContentSmallBoxWrapper>
+                    <CardContentBoxTitleText>
+                      스킬 미스매치 최소화
+                    </CardContentBoxTitleText>
+                  </CardContentSmallBoxWrapper>
+                </CardContentSmallBoxLineWrapper>
+                <CardContentSmallBoxLineWrapper>
+                  <CardContentSmallBoxWrapper>
+                    <CardContentBoxTitleText>
+                      안정적 자립 환경 제공
+                    </CardContentBoxTitleText>
+                  </CardContentSmallBoxWrapper>
+                </CardContentSmallBoxLineWrapper>
+              </div>
             </CardItemWrapper>
           </CardLineWrapper>
         </CardWrapper>
@@ -160,6 +198,10 @@ const TypeText = styled.p`
   color: #ffafaf;
   font-size: 18px;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 16px;
+  }
 `;
 
 const TitleText = styled.p`
@@ -167,12 +209,22 @@ const TitleText = styled.p`
   font-size: 42px;
   margin-bottom: 20px;
   color: #fff;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
 `;
 
 const SubtitleText = styled.p`
   font-weight: 500;
   margin-bottom: 80px;
   color: #fff;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
 `;
 
 const CardWrapper = styled.div`
@@ -189,6 +241,12 @@ const CardLineWrapper = styled.div`
 
   &:not(:last-of-type) {
     margin-bottom: 200px;
+  }
+
+  @media screen and (max-width: 1119px) {
+    &:not(:last-of-type) {
+      margin-bottom: 140px;
+    }
   }
 `;
 
@@ -207,6 +265,15 @@ const CardItemWrapper = styled.div`
   &:not(:last-of-type) {
     margin-right: 30px;
   }
+
+  @media screen and (max-width: 1119px) {
+    min-height: 280px;
+    padding: 22px;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
 `;
 
 const CardTextWrapper = styled.div``;
@@ -215,6 +282,10 @@ const CardItemTitleText = styled.p`
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 22px;
+  }
 `;
 
 const CardItemSubtitleText = styled.p`
@@ -224,6 +295,12 @@ const CardItemSubtitleText = styled.p`
   margin-bottom: 20px;
   max-width: 90%;
   line-height: 1.4;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 12px;
+    margin-bottom: 15px;
+    max-width: 100%;
+  }
 `;
 
 const CardContentImage = styled.div<{ backgroundUrl: string }>`
@@ -261,11 +338,30 @@ const CardContentAbsoluteBoxWrapper = styled.div`
   padding: 11px 17px;
   font-size: 13px;
   line-height: 1.25;
+
+  @media screen and (max-width: 1119px) {
+    width: 70%;
+    padding: 11px;
+    line-height: 1.4;
+  }
 `;
 
 const CardContentBoxLineWrapper = styled.div`
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 1119px) {
+    flex-direction: column;
+  }
+`;
+
+const CardContentSmallBoxLineWrapper = styled.div`
+  display: flex;
+  align-items: center;
+
+  &:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
 `;
 
 const CardContentBoxWrapper = styled.div`
@@ -276,6 +372,17 @@ const CardContentBoxWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 16px 8px;
+
+  @media screen and (max-width: 1119px) {
+    width: 100%;
+    padding: 8px;
+    min-height: 60px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+      margin-right: 0;
+    }
+  }
 `;
 
 const CardContentSmallBoxWrapper = styled.div`
@@ -286,12 +393,24 @@ const CardContentSmallBoxWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 1119px) {
+    min-height: 60px;
+    &:not(:last-of-type) {
+      margin-right: 5px;
+    }
+  }
 `;
 
 const CardContentBoxMainTitleText = styled.p`
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 8px;
+
+  @media screen and (max-width: 1119px) {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
 `;
 
 const CardContentBoxTitleText = styled.p`
