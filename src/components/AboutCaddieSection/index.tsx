@@ -14,7 +14,7 @@ export default function AboutCaddieSection() {
         <AboutWrapper>
           <AboutItem>
             <AboutTagText>
-              <img src="src/assets/img/ic_clock.png" alt="clock" />
+              <img src="/assets/img/ic_clock.png" alt="clock" />
               자유로운 근무 시간
             </AboutTagText>
             <AboutTitleText>
@@ -26,7 +26,7 @@ export default function AboutCaddieSection() {
           </AboutItem>
           <AboutItem>
             <AboutTagText>
-              <img src="src/assets/img/ic_money_pack.png" alt="money pack" />
+              <img src="/assets/img/ic_money_pack.png" alt="money pack" />
               고소득 및 안정적 수입 보장
             </AboutTagText>
             <AboutTitleText>
@@ -38,7 +38,7 @@ export default function AboutCaddieSection() {
           </AboutItem>
           <AboutItem>
             <AboutTagText>
-              <img src="src/assets/img/ic_people.png" alt="people" />
+              <img src="assets/img/ic_people.png" alt="people" />
               원하는 누구나
             </AboutTagText>
             <AboutTitleText>
@@ -50,7 +50,7 @@ export default function AboutCaddieSection() {
           </AboutItem>
           <AboutItem>
             <AboutTagText>
-              <img src="src/assets/img/ic_medal.png" alt="medal" />
+              <img src="assets/img/ic_medal.png" alt="medal" />
               혜택
             </AboutTagText>
             <AboutTitleText>숙식제공</AboutTitleText>
@@ -66,7 +66,7 @@ export default function AboutCaddieSection() {
 
 const Wrapper = styled.div`
   width: 100%;
-  background: center center / cover url("src/assets/img/bg_about_caddie.png");
+  background: center center / cover url("assets/img/bg_about_caddie.png");
 `;
 
 const TypeText = styled.p`
@@ -96,7 +96,7 @@ const AboutWrapper = styled.div`
   flex-wrap: wrap;
   align-items: stretch;
   background: center center / cover
-    url("src/assets/img/bg_about_caddie_divider.png");
+    url("assets/img/bg_about_caddie_divider.png");
 `;
 
 const AboutItem = styled.div`

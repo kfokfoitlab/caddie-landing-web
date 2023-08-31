@@ -6,7 +6,7 @@ export default function BannerSection() {
     <Wrapper>
       <ContentLayout>
         <HeaderWrapper>
-          <img src="src/assets/img/logo.svg" alt="lgoo" />
+          <img src="/assets/img/logo.svg" alt="lgoo" />
 
           <HeaderLinkWrapper>
             <HeaderLinkItem href="#">프로그램 안내</HeaderLinkItem>
@@ -25,13 +25,13 @@ export default function BannerSection() {
           </BannerSubtitleText>
           <BannerServiceButton>
             서비스 신청하기
-            <img src="src/assets/img/ic_arrow_right.svg" alt="arrow" />
+            <img src="/assets/img/ic_arrow_right.svg" alt="arrow" />
           </BannerServiceButton>
         </BannerContentWrapper>
       </ContentLayout>
 
       <BannerScrollButton>
-        <img src="src/assets/img/scroll_down.png" alt="scroll" />
+        <img src="/assets/img/scroll_down.png" alt="scroll" />
       </BannerScrollButton>
     </Wrapper>
   );
@@ -40,7 +40,7 @@ export default function BannerSection() {
 const Wrapper = styled.div`
   width: 100%;
   height: 1074px;
-  background: center center / cover url("src/assets/img/bg_banner.png");
+  background: center center / cover url("assets/img/bg_banner.png");
   position: relative;
 `;
 

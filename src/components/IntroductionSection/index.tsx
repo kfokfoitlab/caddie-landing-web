@@ -10,7 +10,7 @@ export default function IntroductionSection() {
         전문 골프 캐디 양성을 위한 온/오프라인 교육 및 취업 연계 지원
       </SubtitleText>
       <CardWrapper>
-        <CardItemWrapper backgroundUrl="src/assets/img/program_1.png">
+        <CardItemWrapper backgroundUrl="assets/img/program_1.png">
           <CardItemTitleText>
             스포츠·레저·문화 분야 인프라 구축
           </CardItemTitleText>
@@ -21,7 +21,7 @@ export default function IntroductionSection() {
             대학, 기업, 기관 협력 통합 지원
           </CardItemContentText>
         </CardItemWrapper>
-        <CardItemWrapper backgroundUrl="src/assets/img/program_2.png">
+        <CardItemWrapper backgroundUrl="assets/img/program_2.png">
           <CardItemTitleText>
             수요 맞춤형
             <br />
@@ -35,7 +35,7 @@ export default function IntroductionSection() {
             사후지원을 통한 미스매치 최소화
           </CardItemContentText>
         </CardItemWrapper>
-        <CardItemWrapper backgroundUrl="src/assets/img/program_3.png">
+        <CardItemWrapper backgroundUrl="assets/img/program_3.png">
           <CardItemTitleText>
             고수익 창출 및<br /> 안정적 자립 환경 제공
           </CardItemTitleText>

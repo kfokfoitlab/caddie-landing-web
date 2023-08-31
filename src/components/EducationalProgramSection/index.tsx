@@ -7,7 +7,7 @@ export default function EducationalProgramSection() {
       <TypeText>Educational Program</TypeText>
       <TitleText>캐디 취업을 위한 3단계 프로세스</TitleText>
       <SubtitleText>누구나 수료만 하면 취업까지 3개월</SubtitleText>
-      <BannerImage src="src/assets/img/pc.png" alt="pc" />
+      <BannerImage src="assets/img/pc.png" alt="pc" />
     </SectionLayout>
   );
 }
