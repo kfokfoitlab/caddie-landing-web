@@ -7,4 +7,5 @@ export const ContentLayout = styled.div`
   max-width: 1980px;
   padding: 0 100px;
   position: relative;
+  margin: 0 auto;
 `;
