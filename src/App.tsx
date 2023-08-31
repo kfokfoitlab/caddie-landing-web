@@ -6,6 +6,7 @@ import IntroductionSection from "@/components/IntroductionSection";
 import AboutCaddieSection from "@/components/AboutCaddieSection";
 import EducationalProgramSection from "@/components/EducationalProgramSection";
 import AboutTrainingSection from "@/components/AboutTrainingSection";
+import FormSection from "@/components/FormSection";
 
 export function App() {
   return (
@@ -15,6 +16,7 @@ export function App() {
       <AboutCaddieSection />
       <EducationalProgramSection />
       <AboutTrainingSection />
+      <FormSection />
     </GenericLayout>
   );
 }
