@@ -7,6 +7,7 @@ import AboutCaddieSection from "@/components/AboutCaddieSection";
 import EducationalProgramSection from "@/components/EducationalProgramSection";
 import AboutTrainingSection from "@/components/AboutTrainingSection";
 import FormSection from "@/components/FormSection";
+import Footer from "@/components/Footer";
 
 export function App() {
   return (
@@ -17,6 +18,7 @@ export function App() {
       <EducationalProgramSection />
       <AboutTrainingSection />
       <FormSection />
+      <Footer />
     </GenericLayout>
   );
 }
