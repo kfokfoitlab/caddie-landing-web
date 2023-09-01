@@ -1,16 +1,27 @@
 import { ContentLayout } from "@/layouts/ContentLayout";
 import styled from "@emotion/styled";
+import { forwardRef } from "react";
+import { SectionKeys } from "@/pages/main";
 
-export default function BannerSection() {
+const BannerSection = forwardRef<
+  HTMLDivElement,
+  {
+    scrollToSection: (k: SectionKeys) => void;
+  }
+>(({ scrollToSection }, ref) => {
   return (
-    <Wrapper>
+    <Wrapper ref={ref}>
       <ContentLayout>
         <HeaderWrapper>
           <HeaderLogoImage src="/assets/img/logo.svg" alt="logo" />
 
           <HeaderLinkWrapper>
-            <HeaderLinkItem href="#">프로그램 안내</HeaderLinkItem>
-            <HeaderLinkItem href="#">교육신청</HeaderLinkItem>
+            <HeaderLinkItem onClick={() => scrollToSection("INTRODUCTION")}>
+              프로그램 안내
+            </HeaderLinkItem>
+            <HeaderLinkItem onClick={() => scrollToSection("FORM")}>
+              교육신청
+            </HeaderLinkItem>
           </HeaderLinkWrapper>
         </HeaderWrapper>
 
@@ -23,19 +34,21 @@ export default function BannerSection() {
           <BannerSubtitleText>
             취업 연계형 레저 · 문화 · 스포츠 분야 인재 양성 교육
           </BannerSubtitleText>
-          <BannerServiceButton>
+          <BannerServiceButton onClick={() => scrollToSection("FORM")}>
             서비스 신청하기
             <img src="/assets/img/ic_arrow_right.svg" alt="arrow" />
           </BannerServiceButton>
         </BannerContentWrapper>
       </ContentLayout>
 
-      <BannerScrollButton>
+      <BannerScrollButton onClick={() => scrollToSection("INTRODUCTION")}>
         <img src="/assets/img/scroll_down.png" alt="scroll" />
       </BannerScrollButton>
     </Wrapper>
   );
-}
+});
+
+export default BannerSection;
 
 const Wrapper = styled.div`
   width: 100%;
@@ -70,10 +83,11 @@ const HeaderLinkWrapper = styled.div`
   align-items: center;
 `;
 
-const HeaderLinkItem = styled.a`
+const HeaderLinkItem = styled.p`
   color: #fff;
   font-size: 20px;
   font-weight: 600;
+  cursor: pointer;
 
   &:not(:last-of-type) {
     margin-right: 80px;

@@ -1,6 +1,6 @@
 import { SectionLayout } from "@/layouts/SectionLayout";
 import styled from "@emotion/styled";
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import { css } from "@emotion/react";
 import { Checkbox, FormControlLabel } from "@mui/material";
 import { RadioButtonChecked, RadioButtonUnchecked } from "@mui/icons-material";
@@ -15,7 +15,7 @@ interface FormData {
   postcode: string;
 }
 
-export default function FormSection() {
+const FormSection = forwardRef<HTMLDivElement>((_, ref) => {
   const [isShowForm, setIsShowForm] = useState(false);
 
   const [isAgree, setIsAgree] = useState(false);
@@ -122,7 +122,7 @@ export default function FormSection() {
   };
 
   return (
-    <SectionLayout>
+    <SectionLayout ref={ref}>
       <TypeText>Application for Training</TypeText>
       <TitleText>교육신청</TitleText>
       <SubtitleText>선착순 50명 절찬 모집중, 서둘러 신청하세요!</SubtitleText>
@@ -226,7 +226,9 @@ export default function FormSection() {
       </SubmitButton>
     </SectionLayout>
   );
-}
+});
+
+export default FormSection;
 
 const TypeText = styled.p`
   font-weight: bold;

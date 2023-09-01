@@ -1,9 +1,10 @@
 import { SectionLayout } from "@/layouts/SectionLayout";
 import styled from "@emotion/styled";
+import { forwardRef } from "react";
 
-export default function IntroductionSection() {
+const IntroductionSection = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <SectionLayout>
+    <SectionLayout ref={ref}>
       <TypeText>Business introduction</TypeText>
       <TitleText>교육부터 취업까지 올인원 프로그램</TitleText>
       <SubtitleText>
@@ -50,7 +51,9 @@ export default function IntroductionSection() {
       </CardWrapper>
     </SectionLayout>
   );
-}
+});
+
+export default IntroductionSection;
 
 const TypeText = styled.p`
   font-weight: bold;
