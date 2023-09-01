@@ -5,21 +5,33 @@ import { forwardRef } from "react";
 const IntroductionSection = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <SectionLayout ref={ref} className="!pr-0">
-      <TypeText>Business introduction</TypeText>
-      <TitleText>교육부터 취업까지 올인원 프로그램</TitleText>
-      <SubtitleText className="pc">
-        전문 골프 캐디 양성을 위한 온/오프라인 교육 및 취업 연계 지원
-      </SubtitleText>
-      <SubtitleText className="tablet">
-        전문 골프 캐디 양성을 위한 온/오프라인 교육 및 취업 연계 지원
-      </SubtitleText>
-      <SubtitleText className="mobile">
-        전문 골프 캐디 양성을 위한
-        <br />
-        온/오프라인 교육 및 취업 연계 지원
-      </SubtitleText>
+      <div
+        className="flex flex-col items-center"
+        data-aos="fade-up"
+        data-aos-delay="0"
+        data-aos-duration="1000"
+      >
+        <TypeText>Business introduction</TypeText>
+        <TitleText>교육부터 취업까지 올인원 프로그램</TitleText>
+        <SubtitleText className="pc">
+          전문 골프 캐디 양성을 위한 온/오프라인 교육 및 취업 연계 지원
+        </SubtitleText>
+        <SubtitleText className="tablet">
+          전문 골프 캐디 양성을 위한 온/오프라인 교육 및 취업 연계 지원
+        </SubtitleText>
+        <SubtitleText className="mobile">
+          전문 골프 캐디 양성을 위한
+          <br />
+          온/오프라인 교육 및 취업 연계 지원
+        </SubtitleText>
+      </div>
       <CardWrapper>
-        <CardItemWrapper backgroundUrl="assets/img/program_1.png">
+        <CardItemWrapper
+          backgroundUrl="assets/img/program_1.png"
+          data-aos="flip-left"
+          data-aos-delay="0"
+          data-aos-duration="500"
+        >
           <CardItemTitleText>
             스포츠·레저·문화 분야 인프라 구축
           </CardItemTitleText>
@@ -30,7 +42,12 @@ const IntroductionSection = forwardRef<HTMLDivElement>((_, ref) => {
             대학, 기업, 기관 협력 통합 지원
           </CardItemContentText>
         </CardItemWrapper>
-        <CardItemWrapper backgroundUrl="assets/img/program_2.png">
+        <CardItemWrapper
+          backgroundUrl="assets/img/program_2.png"
+          data-aos="flip-left"
+          data-aos-delay="100"
+          data-aos-duration="500"
+        >
           <CardItemTitleText>
             수요 맞춤형
             <br />
@@ -44,7 +61,12 @@ const IntroductionSection = forwardRef<HTMLDivElement>((_, ref) => {
             사후지원을 통한 미스매치 최소화
           </CardItemContentText>
         </CardItemWrapper>
-        <CardItemWrapper backgroundUrl="assets/img/program_3.png">
+        <CardItemWrapper
+          backgroundUrl="assets/img/program_3.png"
+          data-aos="flip-left"
+          data-aos-delay="200"
+          data-aos-duration="500"
+        >
           <CardItemTitleText>
             고수익 창출 및<br /> 안정적 자립 환경 제공
           </CardItemTitleText>

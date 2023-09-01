@@ -6,7 +6,8 @@ import EducationalProgramSection from "@/components/EducationalProgramSection";
 import AboutTrainingSection from "@/components/AboutTrainingSection";
 import FormSection from "@/components/FormSection";
 import Footer from "@/components/Footer";
-import { createRef } from "react";
+import { createRef, useEffect } from "react";
+import AOS from "aos";
 
 export type SectionKeys = "BANNER" | "INTRODUCTION" | "FORM";
 
@@ -33,6 +34,12 @@ export default function MainPage() {
         });
     }
   };
+
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-in-out",
+    });
+  }, []);
 
   return (
     <GenericLayout>

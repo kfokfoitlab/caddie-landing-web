@@ -4,18 +4,48 @@ import styled from "@emotion/styled";
 export default function EducationalProgramSection() {
   return (
     <SectionLayout>
-      <TypeText>Educational Program</TypeText>
-      <TitleText className="pc">캐디 취업을 위한 3단계 프로세스</TitleText>
-      <TitleText className="tablet">캐디 취업을 위한 3단계 프로세스</TitleText>
-      <TitleText className="mobile">
-        캐디 취업을 위한
-        <br />
-        3단계 프로세스
-      </TitleText>
-      <SubtitleText>누구나 수료만 하면 취업까지 3개월</SubtitleText>
-      <BannerImage src="assets/img/pc.png" alt="step" className="pc" />
-      <BannerImage src="assets/img/tb.png" alt="step" className="tablet" />
-      <BannerImage src="assets/img/mob.png" alt="step" className="mobile" />
+      <div
+        className="flex flex-col items-center"
+        data-aos="fade-up"
+        data-aos-delay="0"
+        data-aos-duration="1000"
+      >
+        <TypeText>Educational Program</TypeText>
+        <TitleText className="pc">캐디 취업을 위한 3단계 프로세스</TitleText>
+        <TitleText className="tablet">
+          캐디 취업을 위한 3단계 프로세스
+        </TitleText>
+        <TitleText className="mobile">
+          캐디 취업을 위한
+          <br />
+          3단계 프로세스
+        </TitleText>
+        <SubtitleText>누구나 수료만 하면 취업까지 3개월</SubtitleText>
+      </div>
+      <BannerImage
+        data-aos="fade-up"
+        data-aos-delay="600"
+        data-aos-duration="1000"
+        src="assets/img/pc.png"
+        alt="step"
+        className="pc"
+      />
+      <BannerImage
+        data-aos="fade-up"
+        data-aos-delay="600"
+        data-aos-duration="1000"
+        src="assets/img/tb.png"
+        alt="step"
+        className="tablet"
+      />
+      <BannerImage
+        data-aos="fade-up"
+        data-aos-delay="0"
+        data-aos-duration="1000"
+        src="assets/img/mob.png"
+        alt="step"
+        className="mobile"
+      />
     </SectionLayout>
   );
 }

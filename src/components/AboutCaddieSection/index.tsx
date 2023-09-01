@@ -5,13 +5,24 @@ export default function AboutCaddieSection() {
   return (
     <Wrapper>
       <SectionLayout>
-        <TypeText>About Caddie</TypeText>
-        <TitleText>왜 골프 캐디일까?</TitleText>
-        <SubtitleText>
-          골프 캐디는 안정적인 자립을 위한 고소득 전문직입니다
-        </SubtitleText>
+        <div
+          className="flex flex-col items-center"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="1000"
+        >
+          <TypeText>About Caddie</TypeText>
+          <TitleText>왜 골프 캐디일까?</TitleText>
+          <SubtitleText>
+            골프 캐디는 안정적인 자립을 위한 고소득 전문직입니다
+          </SubtitleText>
+        </div>
 
-        <AboutWrapper>
+        <AboutWrapper
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="1000"
+        >
           <AboutItem>
             <AboutTagText>
               <img src="/assets/img/ic_clock.png" alt="clock" />

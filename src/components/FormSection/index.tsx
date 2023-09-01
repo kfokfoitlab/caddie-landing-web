@@ -61,6 +61,7 @@ const FormSection = forwardRef<HTMLDivElement>((_, ref) => {
   };
 
   const handleClickSubmit = () => {
+    console.log(1);
     if (!isShowForm) {
       setIsShowForm(true);
       return;
@@ -122,7 +123,12 @@ const FormSection = forwardRef<HTMLDivElement>((_, ref) => {
   };
 
   return (
-    <SectionLayout ref={ref}>
+    <SectionLayout
+      ref={ref}
+      data-aos="fade-up"
+      data-aos-delay="0"
+      data-aos-duration="1000"
+    >
       <TypeText>Application for Training</TypeText>
       <TitleText>교육신청</TitleText>
       <SubtitleText>선착순 50명 절찬 모집중, 서둘러 신청하세요!</SubtitleText>

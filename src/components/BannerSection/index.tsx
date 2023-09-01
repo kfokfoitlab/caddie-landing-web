@@ -53,7 +53,11 @@ const BannerSection = forwardRef<
         </HeaderWrapper>
 
         <BannerContentWrapper>
-          <BannerTitleText>
+          <BannerTitleText
+            data-aos="fade-up"
+            data-aos-delay="0"
+            data-aos-duration="1000"
+          >
             <div className="pc">
               자립 지원을 위한
               <br />
@@ -75,10 +79,19 @@ const BannerSection = forwardRef<
               </span>
             </div>
           </BannerTitleText>
-          <BannerSubtitleText>
+          <BannerSubtitleText
+            data-aos="fade-up"
+            data-aos-delay="0"
+            data-aos-duration="1000"
+          >
             취업 연계형 레저 · 문화 · 스포츠 분야 인재 양성 교육
           </BannerSubtitleText>
-          <BannerServiceButton onClick={() => scrollToSection("FORM")}>
+          <BannerServiceButton
+            onClick={() => scrollToSection("FORM")}
+            data-aos="fade-up"
+            data-aos-delay="600"
+            data-aos-duration="500"
+          >
             서비스 신청하기
             <img src="/assets/img/ic_arrow_right.svg" alt="arrow" />
           </BannerServiceButton>
@@ -199,10 +212,14 @@ const HeaderLinkItem = styled.p`
 `;
 
 const BannerContentWrapper = styled.div`
-  padding-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 250px;
+
+  @media screen and (max-width: 1119px) {
+    padding-top: 150px;
+  }
 
   @media screen and (max-width: 767px) {
     padding-top: 16px;

@@ -6,24 +6,35 @@ export default function AboutTrainingSection() {
   return (
     <Wrapper>
       <SectionLayout className="md:!pr-0">
-        <TypeText>About Training</TypeText>
-        <TitleText className="pc">
-          현장과 가까운 실무 교육으로 빠른 취업
-        </TitleText>
-        <TitleText className="tablet">
-          현장과 가까운 실무 교육으로 빠른 취업
-        </TitleText>
-        <TitleText className="mobile">
-          현장과 가까운
-          <br />
-          실무 교육으로 빠른 취업
-        </TitleText>
-        <SubtitleText>
-          자립 청년 대상 전문직 캐디 양성 서비스를 제공합니다
-        </SubtitleText>
+        <div
+          className="flex flex-col items-center"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="1000"
+        >
+          <TypeText>About Training</TypeText>
+          <TitleText className="pc">
+            현장과 가까운 실무 교육으로 빠른 취업
+          </TitleText>
+          <TitleText className="tablet">
+            현장과 가까운 실무 교육으로 빠른 취업
+          </TitleText>
+          <TitleText className="mobile">
+            현장과 가까운
+            <br />
+            실무 교육으로 빠른 취업
+          </TitleText>
+          <SubtitleText>
+            자립 청년 대상 전문직 캐디 양성 서비스를 제공합니다
+          </SubtitleText>
+        </div>
 
         <CardWrapper>
-          <CardLineWrapper>
+          <CardLineWrapper
+            data-aos="fade-right"
+            data-aos-delay="0"
+            data-aos-duration="500"
+          >
             <CardItemWrapper>
               <CardTextWrapper>
                 <CardItemTitleText>사전 직무교육</CardItemTitleText>
@@ -161,7 +172,11 @@ export default function AboutTrainingSection() {
               </div>
             </CardItemWrapper>
           </CardLineWrapper>
-          <CardLineWrapper>
+          <CardLineWrapper
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-duration="500"
+          >
             <CardItemWrapper>
               <CardTextWrapper>
                 <CardItemTitleText>맟춤 실무교육</CardItemTitleText>
