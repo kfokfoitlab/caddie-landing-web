@@ -27,9 +27,26 @@ const BannerSection = forwardRef<
 
         <BannerContentWrapper>
           <BannerTitleText>
-            자립 지원을 위한
-            <br />
-            <span>골프 캐디 양성 프로그램</span>
+            <div className="pc">
+              자립 지원을 위한
+              <br />
+              <span>골프 캐디 양성 프로그램</span>
+            </div>
+            <div className="tablet">
+              자립 지원을 위한
+              <br />
+              <span>골프 캐디 양성 프로그램</span>
+            </div>
+            <div className="mobile">
+              자립 지원을
+              <br />
+              위한{" "}
+              <span>
+                골프 캐디
+                <br />
+                양성 프로그램
+              </span>
+            </div>
           </BannerTitleText>
           <BannerSubtitleText>
             취업 연계형 레저 · 문화 · 스포츠 분야 인재 양성 교육
@@ -59,12 +76,16 @@ const Wrapper = styled.div`
   @media screen and (max-width: 1119px) {
     height: 816px;
   }
+
+  @media screen and (max-width: 767px) {
+    height: 450px;
+  }
 `;
 
 const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
-  height: 120px;
+  height: 70px;
   width: 100%;
   justify-content: space-between;
 `;
@@ -75,12 +96,20 @@ const HeaderLogoImage = styled.img`
   @media screen and (max-width: 1119px) {
     height: 16px;
   }
+
+  @media screen and (max-width: 767px) {
+    height: 10px;
+  }
 `;
 
 const HeaderLinkWrapper = styled.div`
   display: flex;
   height: 100%;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 
 const HeaderLinkItem = styled.p`
@@ -107,21 +136,32 @@ const BannerContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+  }
 `;
 
 const BannerTitleText = styled.p`
   text-align: center;
   font-size: 70px;
   margin-bottom: 20px;
-  color: #fff;
 
-  > span {
-    font-weight: 600;
+  * {
     color: #fff;
+  }
+
+  span {
+    font-weight: 600;
   }
 
   @media screen and (max-width: 1119px) {
     font-size: 50px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 46px;
+    margin-bottom: 9px;
   }
 `;
 
@@ -133,6 +173,10 @@ const BannerSubtitleText = styled.p`
   @media screen and (max-width: 1119px) {
     font-size: 20px;
     margin-bottom: 30px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
   }
 `;
 
@@ -161,6 +205,18 @@ const BannerServiceButton = styled.button`
 
     > img {
       margin-left: 5px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 12px 40px 12px 46px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 14px;
+
+    > img {
+      width: 10px;
+      height: 10px;
     }
   }
 `;

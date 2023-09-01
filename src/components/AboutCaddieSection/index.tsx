@@ -20,8 +20,16 @@ export default function AboutCaddieSection() {
             <AboutTitleText>
               주중<span>or</span>주말
             </AboutTitleText>
-            <AboutSubtitleText>
+            <AboutSubtitleText className="pc">
               다양한 근무 형태로 원하는 시간에 근무 가능
+            </AboutSubtitleText>
+            <AboutSubtitleText className="tablet">
+              다양한 근무 형태로 원하는 시간에 근무 가능
+            </AboutSubtitleText>
+            <AboutSubtitleText className="mobile">
+              다양한 근무 형태로
+              <br />
+              원하는 시간에 근무 가능
             </AboutSubtitleText>
           </AboutItem>
           <AboutItem>
@@ -92,6 +100,10 @@ const TypeText = styled.p`
   @media screen and (max-width: 1119px) {
     font-size: 16px;
   }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
 `;
 
 const TitleText = styled.p`
@@ -115,6 +127,10 @@ const SubtitleText = styled.p`
     font-size: 16px;
     margin-bottom: 40px;
   }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
 `;
 
 const AboutWrapper = styled.div`
@@ -125,11 +141,25 @@ const AboutWrapper = styled.div`
   align-items: stretch;
   background: center center / cover
     url("assets/img/bg_about_caddie_divider.png");
+
+  @media screen and (max-width: 767px) {
+    background: center center / cover
+      url("assets/img/bg_about_caddie_divider.png");
+  }
 `;
 
 const AboutItem = styled.div`
   width: 50%;
   padding: 50px 0 50px 72px;
+
+  @media screen and (max-width: 767px) {
+    padding: 24px 12px;
+    height: 140px;
+
+    &:nth-of-type(2n) {
+      padding-right: 0;
+    }
+  }
 `;
 
 const AboutTagText = styled.p`
@@ -142,6 +172,16 @@ const AboutTagText = styled.p`
   > img {
     height: 19px;
     margin-right: 6px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+
+    > img {
+      height: 10px;
+    }
   }
 `;
 
@@ -157,6 +197,14 @@ const AboutTitleText = styled.p`
     font-size: 16px;
     margin: 0 4px;
   }
+
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+
+    > span {
+      font-size: 10px;
+    }
+  }
 `;
 
 const AboutSubtitleText = styled.p`
@@ -166,5 +214,10 @@ const AboutSubtitleText = styled.p`
 
   @media screen and (max-width: 1119px) {
     line-height: 1.4;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+    letter-spacing: -0.18px;
   }
 `;

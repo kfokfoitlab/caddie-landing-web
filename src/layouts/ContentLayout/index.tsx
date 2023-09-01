@@ -12,4 +12,8 @@ export const ContentLayout = styled.div`
   @media screen and (max-width: 1119px) {
     padding: 0 50px;
   }
+
+  @media screen and (max-width: 767px) {
+    padding: 0 20px;
+  }
 `;

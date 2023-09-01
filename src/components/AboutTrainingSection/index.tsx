@@ -5,9 +5,19 @@ import { css } from "@emotion/react";
 export default function AboutTrainingSection() {
   return (
     <Wrapper>
-      <SectionLayout>
+      <SectionLayout className="md:!pr-0">
         <TypeText>About Training</TypeText>
-        <TitleText>현장과 가까운 실무 교육으로 빠른 취업</TitleText>
+        <TitleText className="pc">
+          현장과 가까운 실무 교육으로 빠른 취업
+        </TitleText>
+        <TitleText className="tablet">
+          현장과 가까운 실무 교육으로 빠른 취업
+        </TitleText>
+        <TitleText className="mobile">
+          현장과 가까운
+          <br />
+          실무 교육으로 빠른 취업
+        </TitleText>
         <SubtitleText>
           자립 청년 대상 전문직 캐디 양성 서비스를 제공합니다
         </SubtitleText>
@@ -244,6 +254,11 @@ const TypeText = styled.p`
   @media screen and (max-width: 1119px) {
     font-size: 16px;
   }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+    padding-right: 25px;
+  }
 `;
 
 const TitleText = styled.p`
@@ -256,6 +271,11 @@ const TitleText = styled.p`
     font-size: 32px;
     margin-bottom: 10px;
   }
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    padding-right: 25px;
+  }
 `;
 
 const SubtitleText = styled.p`
@@ -267,19 +287,34 @@ const SubtitleText = styled.p`
     font-size: 16px;
     margin-bottom: 40px;
   }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+    margin-bottom: 40px;
+    padding-right: 25px;
+  }
 `;
 
 const CardWrapper = styled.div`
   width: 100%;
   max-width: 1200px;
-
   background: center center no-repeat url("assets/img/ic_arrow_down.svg");
+
+  @media screen and (max-width: 767px) {
+    overflow-x: scroll;
+    max-width: 100%;
+    width: 100%;
+  }
 `;
 
 const CardLineWrapper = styled.div`
   display: flex;
   align-items: flex-end;
   position: relative;
+  width: inherit;
+  background-image: url("assets/img/dot_line.svg");
+  background-position: left center;
+  background-repeat: repeat-x;
 
   &:not(:last-of-type) {
     margin-bottom: 200px;
@@ -289,6 +324,11 @@ const CardLineWrapper = styled.div`
     &:not(:last-of-type) {
       margin-bottom: 140px;
     }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-right: 20px;
+    width: max-content;
   }
 `;
 
@@ -315,6 +355,12 @@ const CardItemWrapper = styled.div`
 
     &:not(:last-of-type) {
       margin-right: 20px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &:last-of-type {
+      margin-right: 30px;
     }
   }
 `;

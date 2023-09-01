@@ -7,8 +7,16 @@ const IntroductionSection = forwardRef<HTMLDivElement>((_, ref) => {
     <SectionLayout ref={ref}>
       <TypeText>Business introduction</TypeText>
       <TitleText>교육부터 취업까지 올인원 프로그램</TitleText>
-      <SubtitleText>
+      <SubtitleText className="pc">
         전문 골프 캐디 양성을 위한 온/오프라인 교육 및 취업 연계 지원
+      </SubtitleText>
+      <SubtitleText className="tablet">
+        전문 골프 캐디 양성을 위한 온/오프라인 교육 및 취업 연계 지원
+      </SubtitleText>
+      <SubtitleText className="mobile">
+        전문 골프 캐디 양성을 위한
+        <br />
+        온/오프라인 교육 및 취업 연계 지원
       </SubtitleText>
       <CardWrapper>
         <CardItemWrapper backgroundUrl="assets/img/program_1.png">
@@ -64,6 +72,10 @@ const TypeText = styled.p`
   @media screen and (max-width: 1119px) {
     font-size: 16px;
   }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
 `;
 
 const TitleText = styled.p`
@@ -75,6 +87,10 @@ const TitleText = styled.p`
     font-size: 32px;
     margin-bottom: 10px;
   }
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 `;
 
 const SubtitleText = styled.p`
@@ -85,6 +101,10 @@ const SubtitleText = styled.p`
     font-size: 16px;
     margin-bottom: 40px;
   }
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 `;
 
 const CardWrapper = styled.div`
@@ -92,6 +112,11 @@ const CardWrapper = styled.div`
   width: 100%;
   justify-content: center;
   align-items: stretch;
+  overflow-x: scroll;
+
+  @media screen and (max-width: 1119px) {
+    justify-content: flex-start;
+  }
 `;
 
 const CardItemWrapper = styled.div<{ backgroundUrl: string }>`
@@ -110,6 +135,15 @@ const CardItemWrapper = styled.div<{ backgroundUrl: string }>`
   @media screen and (max-width: 1119px) {
     padding: 58px 20px;
     min-height: 330px;
+  }
+
+  @media screen and (max-width: 1119px) {
+    min-width: 226px;
+    width: 226px;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
   }
 `;
 

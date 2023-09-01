@@ -17,6 +17,10 @@ const Wrapper = styled.div`
   @media screen and (max-width: 1119px) {
     padding: 65px 40px;
   }
+
+  @media screen and (max-width: 767px) {
+    padding: 35px 20px;
+  }
 `;
 
 const Logo = styled.img`
@@ -26,6 +30,10 @@ const Logo = styled.img`
   @media screen and (max-width: 1119px) {
     height: 17px;
     margin-bottom: 15px;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 13px;
   }
 `;
 

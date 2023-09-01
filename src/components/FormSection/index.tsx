@@ -239,6 +239,10 @@ const TypeText = styled.p`
   @media screen and (max-width: 1119px) {
     font-size: 16px;
   }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
 `;
 
 const TitleText = styled.p`
@@ -257,6 +261,10 @@ const SubtitleText = styled.p`
 
   @media screen and (max-width: 1119px) {
     font-size: 16px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
   }
 `;
 
@@ -316,6 +324,10 @@ const FormLabelText = styled.p`
   @media screen and (max-width: 1119px) {
     margin-bottom: 10px;
   }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
 `;
 
 const FormInputWrapper = styled.div`
@@ -351,6 +363,10 @@ const FormInput = styled.input<{ isError: boolean }>`
 
   @media screen and (max-width: 1119px) {
     font-size: 16px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
   }
 `;
 
@@ -410,5 +426,13 @@ const SubmitButton = styled(Button)`
     border-radius: 24px;
     width: 210px;
     font-size: 16px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 20px;
+    width: 190px;
+    font-size: 14px;
   }
 `;
