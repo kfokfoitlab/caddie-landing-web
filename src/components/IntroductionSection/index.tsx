@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 
 const IntroductionSection = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <SectionLayout ref={ref}>
+    <SectionLayout ref={ref} className="!pr-0">
       <TypeText>Business introduction</TypeText>
       <TitleText>교육부터 취업까지 올인원 프로그램</TitleText>
       <SubtitleText className="pc">
@@ -75,6 +75,7 @@ const TypeText = styled.p`
 
   @media screen and (max-width: 767px) {
     font-size: 14px;
+    padding-right: 25px;
   }
 `;
 
@@ -90,6 +91,7 @@ const TitleText = styled.p`
 
   @media screen and (max-width: 767px) {
     text-align: center;
+    padding-right: 25px;
   }
 `;
 
@@ -104,6 +106,7 @@ const SubtitleText = styled.p`
 
   @media screen and (max-width: 767px) {
     text-align: center;
+    padding-right: 25px;
   }
 `;
 
@@ -112,10 +115,15 @@ const CardWrapper = styled.div`
   width: 100%;
   justify-content: center;
   align-items: stretch;
-  overflow-x: scroll;
 
   @media screen and (max-width: 1119px) {
     justify-content: flex-start;
+  }
+
+  @media screen and (max-width: 1119px) {
+    justify-content: flex-start;
+    overflow-x: scroll;
+    padding-right: 25px;
   }
 `;
 
@@ -140,6 +148,7 @@ const CardItemWrapper = styled.div<{ backgroundUrl: string }>`
   @media screen and (max-width: 1119px) {
     min-width: 226px;
     width: 226px;
+    flex-grow: inherit;
 
     &:not(:last-of-type) {
       margin-right: 20px;
