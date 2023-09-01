@@ -1,7 +1,9 @@
 import { ContentLayout } from "@/layouts/ContentLayout";
 import styled from "@emotion/styled";
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
 import { SectionKeys } from "@/pages/main";
+import { Button } from "@mui/base";
+import { Drawer } from "@mui/material";
 
 const BannerSection = forwardRef<
   HTMLDivElement,
@@ -9,8 +11,29 @@ const BannerSection = forwardRef<
     scrollToSection: (k: SectionKeys) => void;
   }
 >(({ scrollToSection }, ref) => {
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+  const handleClickMenuButton = (key: SectionKeys) => {
+    setIsOpenMenu(false);
+    scrollToSection(key);
+  };
+
   return (
     <Wrapper ref={ref}>
+      <Drawer
+        open={isOpenMenu}
+        onClose={() => setIsOpenMenu(false)}
+        anchor="right"
+      >
+        <MenuWrapper>
+          <MenuItem onClick={() => handleClickMenuButton("INTRODUCTION")}>
+            프로그램 안내
+          </MenuItem>
+          <MenuItem onClick={() => handleClickMenuButton("FORM")}>
+            교육신청
+          </MenuItem>
+        </MenuWrapper>
+      </Drawer>
       <ContentLayout>
         <HeaderWrapper>
           <HeaderLogoImage src="/assets/img/logo.svg" alt="logo" />
@@ -23,6 +46,10 @@ const BannerSection = forwardRef<
               교육신청
             </HeaderLinkItem>
           </HeaderLinkWrapper>
+
+          <MenuButton onClick={() => setIsOpenMenu(true)}>
+            <img src="/assets/img/ic_menu.svg" alt="menu" />
+          </MenuButton>
         </HeaderWrapper>
 
         <BannerContentWrapper>
@@ -67,6 +94,31 @@ const BannerSection = forwardRef<
 
 export default BannerSection;
 
+const MenuWrapper = styled.div`
+  width: 240px;
+  padding: 50px 0;
+`;
+
+const MenuItem = styled.button`
+  padding: 0 20px;
+  border: 0;
+  border-bottom: 1px solid #ebebeb;
+  outline: 0;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: #fff;
+  color: #222;
+
+  &:first-child {
+    border-top: 1px solid #ccc;
+  }
+`;
+
 const Wrapper = styled.div`
   width: 100%;
   height: 1074px;
@@ -109,6 +161,21 @@ const HeaderLinkWrapper = styled.div`
 
   @media screen and (max-width: 767px) {
     display: none;
+  }
+`;
+
+const MenuButton = styled(Button)`
+  display: none;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
   }
 `;
 
