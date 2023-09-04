@@ -119,24 +119,30 @@ const FormSection = forwardRef<HTMLDivElement>((_, ref) => {
       return;
     }
 
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/survey`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/survey`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    if (res.status !== 200) {
+      if (res.status !== 200) {
+        enqueueSnackbar("신청실패", {
+          variant: "error",
+        });
+        return;
+      }
+
+      enqueueSnackbar("신청완료!", {
+        variant: "success",
+      });
+    } catch (_) {
       enqueueSnackbar("신청실패", {
         variant: "error",
       });
-      return;
     }
-
-    enqueueSnackbar("신청완료!", {
-      variant: "success",
-    });
   };
 
   return (
