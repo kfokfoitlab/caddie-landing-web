@@ -5,3 +5,4 @@ tsconfig.tsbuildinfo
 .vscode
 .*cache
 .DS_Store
+.env

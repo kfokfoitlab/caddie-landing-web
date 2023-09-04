@@ -5,6 +5,7 @@ import { css } from "@emotion/react";
 import { Checkbox, FormControlLabel } from "@mui/material";
 import { RadioButtonChecked, RadioButtonUnchecked } from "@mui/icons-material";
 import { Button } from "@mui/base";
+import { enqueueSnackbar } from "notistack";
 
 interface FormData {
   name: string;
@@ -60,7 +61,7 @@ const FormSection = forwardRef<HTMLDivElement>((_, ref) => {
     }).open();
   };
 
-  const handleClickSubmit = () => {
+  const handleClickSubmit = async () => {
     if (!isShowForm) {
       setIsShowForm(true);
       return;
@@ -118,9 +119,23 @@ const FormSection = forwardRef<HTMLDivElement>((_, ref) => {
       return;
     }
 
-    console.log({
-      ...formData,
-      isAgree,
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/survey`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.status !== 200) {
+      enqueueSnackbar("신청실패", {
+        variant: "error",
+      });
+      return;
+    }
+
+    enqueueSnackbar("신청완료!", {
+      variant: "success",
     });
   };
 
