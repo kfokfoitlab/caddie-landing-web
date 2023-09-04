@@ -61,7 +61,6 @@ const FormSection = forwardRef<HTMLDivElement>((_, ref) => {
   };
 
   const handleClickSubmit = () => {
-    console.log(1);
     if (!isShowForm) {
       setIsShowForm(true);
       return;
@@ -119,7 +118,10 @@ const FormSection = forwardRef<HTMLDivElement>((_, ref) => {
       return;
     }
 
-    console.log(formData);
+    console.log({
+      ...formData,
+      isAgree,
+    });
   };
 
   return (

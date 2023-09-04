@@ -38,6 +38,7 @@ export default function MainPage() {
   useEffect(() => {
     AOS.init({
       easing: "ease-in-out",
+      once: true,
     });
   }, []);
 
