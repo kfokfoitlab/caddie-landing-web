@@ -99,7 +99,7 @@ export default function AboutCaddieSection() {
 
 const Wrapper = styled.div`
   width: 100%;
-  background: center center / cover url("assets/img/bg_about_caddie.png");
+  background: center center / cover url("assets/img/bg_about_caddie.jpg");
 `;
 
 const TypeText = styled.p`

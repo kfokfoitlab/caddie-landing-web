@@ -79,7 +79,7 @@ const FormSection = forwardRef<HTMLDivElement>((_, ref) => {
       postcode: "",
     };
 
-    const phoneRegex = /^\d{3}-\d{4}-\d{4}$/g;
+    const phoneRegex = /^\d{11}$/g;
     const birthRegex = /^\d{6}$/g;
 
     if (!name) {
@@ -181,6 +181,7 @@ const FormSection = forwardRef<HTMLDivElement>((_, ref) => {
               value={formData.birth}
               onChange={(e) => handleChangeForm(e, "birth")}
               placeholder="예) 990101"
+              maxLength={6}
             />
           </FormInputWrapper>
           <FormErrorText>{errorText.birth}</FormErrorText>
@@ -194,7 +195,8 @@ const FormSection = forwardRef<HTMLDivElement>((_, ref) => {
               isError={Boolean(errorText.phone)}
               value={formData.phone}
               onChange={(e) => handleChangeForm(e, "phone")}
-              placeholder="예) 010-1234-5678"
+              placeholder="예) 01012341234"
+              maxLength={11}
             />
           </FormInputWrapper>
           <FormErrorText>{errorText.phone}</FormErrorText>

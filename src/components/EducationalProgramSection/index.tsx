@@ -26,7 +26,7 @@ export default function EducationalProgramSection() {
         data-aos="fade-up"
         data-aos-delay="600"
         data-aos-duration="1000"
-        src="assets/img/pc.png"
+        src="assets/img/pc.jpg"
         alt="step"
         className="pc"
       />
@@ -34,7 +34,7 @@ export default function EducationalProgramSection() {
         data-aos="fade-up"
         data-aos-delay="600"
         data-aos-duration="1000"
-        src="assets/img/tb.png"
+        src="assets/img/tb.jpg"
         alt="step"
         className="tablet"
       />
@@ -42,7 +42,7 @@ export default function EducationalProgramSection() {
         data-aos="fade-up"
         data-aos-delay="0"
         data-aos-duration="1000"
-        src="assets/img/mob.png"
+        src="assets/img/mob.jpg"
         alt="step"
         className="mobile"
       />

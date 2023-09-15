@@ -135,7 +135,7 @@ const MenuItem = styled.button`
 const Wrapper = styled.div`
   width: 100%;
   height: 1074px;
-  background: center center / cover url("assets/img/bg_banner.png");
+  background: center center / cover url("assets/img/bg_banner.jpg");
   position: relative;
 
   @media screen and (max-width: 1119px) {

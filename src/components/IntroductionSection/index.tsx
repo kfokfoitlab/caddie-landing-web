@@ -27,7 +27,7 @@ const IntroductionSection = forwardRef<HTMLDivElement>((_, ref) => {
       </div>
       <CardWrapper>
         <CardItemWrapper
-          backgroundUrl="assets/img/program_1.png"
+          backgroundUrl="assets/img/program_1.jpg"
           data-aos="flip-left"
           data-aos-delay="0"
           data-aos-duration="500"
@@ -43,7 +43,7 @@ const IntroductionSection = forwardRef<HTMLDivElement>((_, ref) => {
           </CardItemContentText>
         </CardItemWrapper>
         <CardItemWrapper
-          backgroundUrl="assets/img/program_2.png"
+          backgroundUrl="assets/img/program_2.jpg"
           data-aos="flip-left"
           data-aos-delay="100"
           data-aos-duration="500"
@@ -62,7 +62,7 @@ const IntroductionSection = forwardRef<HTMLDivElement>((_, ref) => {
           </CardItemContentText>
         </CardItemWrapper>
         <CardItemWrapper
-          backgroundUrl="assets/img/program_3.png"
+          backgroundUrl="assets/img/program_3.jpg"
           data-aos="flip-left"
           data-aos-delay="200"
           data-aos-duration="500"

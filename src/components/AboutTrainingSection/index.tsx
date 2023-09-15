@@ -43,7 +43,7 @@ export default function AboutTrainingSection() {
                   이수
                 </CardItemSubtitleText>
               </CardTextWrapper>
-              <CardContentImage backgroundUrl="assets/img/traning_1.png" />
+              <CardContentImage backgroundUrl="assets/img/traning_1.jpg" />
               <CardContentAbsoluteBoxWrapper>
                 취업에 필요한 이론 및 실습
                 <br /> 체계적 교육 설계
@@ -184,7 +184,7 @@ export default function AboutTrainingSection() {
                   골프장 현직 캐디의 밀착 멘토링
                 </CardItemSubtitleText>
               </CardTextWrapper>
-              <CardContentImage backgroundUrl="assets/img/traning_2.png" />
+              <CardContentImage backgroundUrl="assets/img/traning_2.jpg" />
               <CardContentAbsoluteBoxWrapper>
                 수료 후 현장 투입,
                 <br />
@@ -257,7 +257,7 @@ export default function AboutTrainingSection() {
 
 const Wrapper = styled.div`
   width: 100%;
-  background: center center / cover url("assets/img/bg_about_training.png");
+  background: center center / cover url("assets/img/bg_about_training.jpg");
 `;
 
 const TypeText = styled.p`
