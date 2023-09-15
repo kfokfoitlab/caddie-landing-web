@@ -138,11 +138,7 @@ const CardWrapper = styled.div`
   justify-content: center;
   align-items: stretch;
 
-  @media screen and (max-width: 1119px) {
-    justify-content: flex-start;
-  }
-
-  @media screen and (max-width: 1119px) {
+  @media screen and (max-width: 767px) {
     justify-content: flex-start;
     overflow-x: scroll;
     padding-right: 25px;

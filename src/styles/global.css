@@ -63,6 +63,10 @@
   word-break: keep-all;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .pc {
   display: inherit;
 
